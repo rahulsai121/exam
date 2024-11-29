@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Management Platform</title>
+</head>
+<body>
+  <h1>Recipe Management Platform</h1>
+
+  <div id="user-section">
+    <button id="logout-button">Logout</button>
+    <h2>User Profile</h2>
+    <div id="profile"></div>
+
+    <h2>Update Profile</h2>
+    <form id="updateProfileForm">
+      <input type="text" id="updateUsername" placeholder="New Username" required><br>
+      <input type="email" id="updateEmail" placeholder="New Email" required><br>
+      <button type="submit">Update Profile</button>
+    </form>
+
+    <h1>Create Recipe</h1>
+    <form id="createRecipeForm">
+        <label>Title:</label>
+        <input type="text" id="title" required><br>
+        <label>Ingredients:</label>
+        <textarea id="ingredients" required></textarea><br>
+        <label>Instructions:</label>
+        <textarea id="instructions" required></textarea><br>
+        <label>Cooking Time:</label>
+        <input type="number" id="cookingTime" required><br>
+        <label>Servings:</label>
+        <input type="number" id="servings" required><br>
+        <label>Image:</label>
+        <input type="file" id="image" required><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    
+    <form id="editRecipeForm" style="display: none;">
+      <h1>Edit Recipe</h1>
+        <input type="hidden" id="editRecipeId">
+        <label>Title:</label>
+        <input type="text" id="editTitle" required><br>
+        <label>Ingredients:</label>
+        <textarea id="editIngredients" required></textarea><br>
+        <label>Instructions:</label>
+        <textarea id="editInstructions" required></textarea><br>
+        <label>Cooking Time:</label>
+        <input type="number" id="editCookingTime" required><br>
+        <label>Servings:</label>
+        <input type="number" id="editServings" required><br>
+        <label>Image:</label>
+        <input type="file" id="editImage" required><br>
+        <button type="submit">Update</button>
+    </form>
+
+    <button id="yourRecipes">Your Recipes</button>
+    <h1>Recipes</h1>
+    <div id="recipesContainer"></div>
+
+
+  </div>
+
+  <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+
+  <script src="mainPage.js"></script>
+</body>
+</html>
